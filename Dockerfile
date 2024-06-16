@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk
+FROM eclipse-temurin:17-jre-jammy
 
 COPY ./target/gymmy-*.jar /service.jar
 
