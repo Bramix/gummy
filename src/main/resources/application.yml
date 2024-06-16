@@ -21,7 +21,7 @@ spring:
             clientId: 7pvp2a8btqcvgq9e5mplql11ps
             clientSecret: d4u2sa45h5dbslgcas33cs9ur25jago2u8o4lpmoc5pdgri896e
 #            scope: openid
-            redirect-uri: http://ec2-3-127-214-206.eu-central-1.compute.amazonaws.com:8080/login/oauth2/code/cognito
+            redirect-uri: https://u0eishcald.execute-api.eu-central-1.amazonaws.com/login/oauth2/code/cognito
             clientName: gummy-app
         provider:
           cognito:
