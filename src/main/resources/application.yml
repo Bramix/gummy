@@ -2,9 +2,9 @@ spring:
   application:
     name: gymmy
   datasource:
-    url: jdbc:postgresql://localhost:5432/gymmy
-    username: us
-    password: test
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -21,7 +21,7 @@ spring:
             clientId: 7pvp2a8btqcvgq9e5mplql11ps
             clientSecret: d4u2sa45h5dbslgcas33cs9ur25jago2u8o4lpmoc5pdgri896e
 #            scope: openid
-            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            redirect-uri: ${app.host}/login/oauth2/code/cognito
             clientName: gummy-app
         provider:
           cognito:
@@ -31,6 +31,8 @@ server:
     session:
       timeout: 30m
 
+app:
+  host: ${APP_HOST}
 aws:
   poolId: eu-central-1_Gn0iqXCjK
   s3:
